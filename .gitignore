@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Virtual env
+.env
+.venv/
+
+# dbt and profiles
+profiles.yml
+
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+*snowflakecredentials.tf
+
+
+
+
+# OS
+.DS_Store
+
+# Python logs
+*.log
+
+# Secrets
+*.json
+
+.github/
+.pytest_cache
+airflow/
+dbt/
+*iam.tf
+*snowflake.tf
+pipeline/
+tests/
+docs/
