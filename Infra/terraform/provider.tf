@@ -14,8 +14,10 @@ terraform {
 
 # Configure the AWS Provider
 provider "aws" {
-  region = "eu-north-1"
+  region  = "eu-north-1"
+  profile = "default"
 }
+
 
 
 # # A simple configuration of the provider with a default authentication.

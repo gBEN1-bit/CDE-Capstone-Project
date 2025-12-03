@@ -27,5 +27,5 @@ resource "aws_s3_bucket_versioning" "s3version" {
 resource "aws_s3_object" "cx_raw_folder" {
   bucket = aws_s3_bucket.s3datalake.bucket
   key    = "raw/"
-  
+
 }
