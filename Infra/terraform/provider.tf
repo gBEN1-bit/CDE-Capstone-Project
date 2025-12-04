@@ -1,22 +1,40 @@
 terraform {
+  required_version = ">= 1.3.0"
+
   required_providers {
     aws = {
       source  = "hashicorp/aws"
       version = "~> 6.0"
     }
-    snowflake = {
-      source  = "snowflakedb/snowflake"
-      version = ">= 1.0.0"
-    }
+    # snowflake = {
+    #   source  = "snowflakedb/snowflake"
+    #   version = ">= 1.0.0"
+    # }
   }
 }
 
 
-# Configure the AWS Provider
 provider "aws" {
-  region  = "eu-north-1"
-  profile = "default"
+  region = var.aws_region
+  profile = var.aws_profile
 }
+
+# provider "snowflake" {
+#   # This block is optional if you prefer to create snowflake objects manually or via the Snowflake console.
+#   organization_name   = var.snowflake_organization_name
+#   account_name  = var.snowflake_account
+#   user = var.snowflake_user
+#   password = var.snowflake_password
+#   role     = var.snowflake_role
+# }
+
+
+
+# Configure the AWS Provider
+# provider "aws" {
+#   region  = "eu-north-1"
+#   profile = "default"
+# }
 
 
 

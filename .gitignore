@@ -11,16 +11,15 @@ build/
 
 # dbt and profiles
 profiles.yml
+target/
+dbt_packages/
 
 # Terraform
 *.tfstate
 *.tfstate.*
 .terraform/
 .terraform.lock.hcl
-*snowflakecredentials.tf
-
-
-
+*variables.tf
 
 # OS
 .DS_Store
@@ -30,13 +29,37 @@ profiles.yml
 
 # Secrets
 *.json
+creds/
+
+# Local airflow
+airflow/airflow.db
+airflow/logs/
+
+# CI
+.github/workflows/*.yml
+
+# Local notebooks
+.ipynb_checkpoints/
+
+# Ignore docker image build artifacts
+*.tar
+
 
 .github/
 .pytest_cache
 airflow/
 dbt/
-*iam.tf
+# *iam.tf
 *snowflake.tf
 pipeline/
 tests/
 docs/
+snowflake/
+
+..pre-commit-config.yaml
+.mkdocs.yml
+
+
+
+
+
